@@ -7,7 +7,7 @@ version = v"1.16.0"
 
 # Collection of sources required to build GSL
 sources = [
-    "ftp://ftp.gnu.org/gnu/gsl/gsl-1.16.tar.gz" =>
+    "http://ftp.gnu.org/gnu/gsl/gsl-1.16.tar.gz" =>
     "73bc2f51b90d2a780e6d266d43e487b3dbd78945dd0b04b14ca5980fe28d2f53",
 
 ]
