@@ -25,3 +25,16 @@ before_script:
 script:
   - julia build_tarballs.jl
 
+
+deploy:
+    provider: releases
+    api_key:
+        # Note; this api_key is only valid for giordano/GSLBuilder.jl; you need
+        # to make your own: https://docs.travis-ci.com/user/deployment/releases/
+        secure: alFbMXh5FWr/hBUq66uzIo78NFqMpgPTRUWbQNiltFQ2ebcD3inP7W4Qudgy7sURxzoO+EBoUZEx1FLNhhMzvznQGpPqOoDu2vf06sei1XKs1cKJz1LJXyyI3qHCiG9npKvTw83XHvzkdqgzlmYY2bUr/i1xs8s7c1o9P4G70pzqyncmPibHbOl02z9vFiWKY9I8fvLiSsfTm6GwFx09oU9xVTlEAAu+oyphhXCt/j7stndxBkzLzTbdGWetKRUHmMvn8r5eKL5rZvcpkyhyJsmPSkuk9GeUbXJyfTi6kyB9fzTXH/YxC1TRj2b68+qJQejJwOZay8eLKQOBaxycav+a5W3ljKvHgU7AMzDtPJ/YDQUxNhNXyaP8PV4MbTPyR+t2zUlykbPfkdPwTb++hUeS84lO4J15A76S+wCkuALMF83zNw9hmVNn1htnll2Yxs0K4Vjq4sxgPyXn7Wrx4t9Ns6cFkj8v4Pac1dibQjHnAVkZgnuQxKiIkKoJPnjtEar2Ps5fK8bLq/9JS3pjpogs/trXwhK6aH6XRt9nBtR61ZR7EWveFRCwkoX4CGL4V+GqHGQS/A5bDH+arf01Dge6mnAq56UICbNVQ7UZ6/KssGXy3IbFbIlfqdHhmgBvKFaN9altRJ/rwXSqovT1EJZ8r/6Nc5lRBOoBTgNh1Dg=
+    file_glob: true
+    file: products/*
+    skip_cleanup: true
+    on:
+        repo: giordano/GSLBuilder.jl
+        tags: true
