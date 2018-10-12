@@ -19,7 +19,6 @@ cd $WORKSPACE/srcdir/gsl-*/
 ./configure --prefix=$prefix --host=${target}
 make -j${nproc}
 make install
-
 """
 
 # These are the platforms we will build for by default, unless further
