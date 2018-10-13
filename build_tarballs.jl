@@ -3,13 +3,12 @@
 using BinaryBuilder
 
 name = "GSL"
-version = v"1.16.0"
+version = v"2.5.0"
 
 # Collection of sources required to build GSL
 sources = [
-    "http://ftp.gnu.org/gnu/gsl/gsl-1.16.tar.gz" =>
-    "73bc2f51b90d2a780e6d266d43e487b3dbd78945dd0b04b14ca5980fe28d2f53",
-
+    "http://ftp.gnu.org/gnu/gsl/gsl-2.5.tar.gz" =>
+    "0460ad7c2542caaddc6729762952d345374784100223995eb14d614861f2258d",
 ]
 
 # Bash recipe for building across all platforms
